@@ -4,3 +4,4 @@ This repository contains LaTeX code for creating a professional resume using the
 
 Contents
 resume.tex: This is the main LaTeX file for the resume.
+resume.cls: Custom LaTeX class file defining the resume format and layout.
