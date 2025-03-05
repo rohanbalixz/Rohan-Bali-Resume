@@ -1,63 +1,235 @@
-\documentclass{resume} % Use the custom resume.cls style
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Rohan Bali} % Your name
-% You can merge both of these into a single line, if you do not have a website.
-\address{+1(774) 524-0505 $\vert$ Dartmouth, MA} 
-\address{\href{mailto:rbali@umassd.edu}{rbali@umassd.edu} $\vert$ \href{https://www.linkedin.com/in/rohan-bali-301345293/}{LinkedIn} $\vert$ \href{https://github.com/rohanbalixz}{GitHub}}  %
 
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
 \begin{document}
 
-\begin{rSection}{TOOLS and SKILLS}
-\begin{itemize}
-    \itemsep -3pt{}
-    \item Python, R, SQL, SciPy, Statsmodels, Scikit-learn, TensorFlow, Keras, PyTorch, Matplotlib, Seaborn, Plotly, ggplot2, Tableau, Power BI, Pandas, NumPy, dplyr (R), Hadoop, Spark, HDFS, Hive, Pig, Amazon S3, Google BigQuery, Azure Databricks, NLTK, SpaCy, Hugging Face Transformers, GitHub
-    \item Probability and Statistics, Linear Algebra, Calculus, Optimization, Coding Proficiency, Algorithmic Thinking, Supervised and Learning, Model Evaluation and Validation, Data Cleaning, Data Transformation, Visual Storytelling, Communication, Report Writing, Analytical and Critical Thinking, Curiosity and Research skills, Data Ethics and Privacy 
-\end{itemize}
-\end{rSection}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{rSection}{PROJECTS}
-\vspace{-1.25em}
-\item \textbf{Road Safety Analysis Using Machine Learning} {The Road Safety Analysis project for Indian highways, diverse machine learning models were employed.Through predictive analytics, they assessed variables such as traffic volume, road conditions, accident history, and weather patterns to identify highways with the lowest risk of accidents, aiding in strategic road planning and safety enhancement measures.}
-\item \textbf{Movie Recommendation System.} {Harnessing data from 5000 movies on TMDB, I implemented a Bag of Words model for natural language processing. Utilizing vectorization techniques like TF-IDF, the system generates five tailored movie recommendations based on your selection. This method enhances accuracy and personalization.}
-\item \textbf{Boston Real Estate Price Prediction Syste} {The Boston Housing Price Prediction project aims to forecast housing prices using advanced machine learning techniques. The dataset includes 506 entries with 14 attributes, such as crime rate, number of rooms, and building age. This project outlines steps from data exploration to model deployment.}
-\item \textbf{Used Cars Price Prediction System} {The Car Price Prediction Model employs Linear Regression, a fundamental and widely-used statistical method, to estimate the market value of used cars. This model predicts car prices based on various input features such as car brand, model, year of manufacture, fuel type, and kilometers driven.}
-\end{rSection} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{ROHAN}{BALI}{ \urlstyle{same}\\
+\href{mailto:rbali@umassd.edu}{rbali@umassd.edu} | +1 (774)-524-0505 
+}
 
-\begin{rSection}{EXPERIENCE}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Capgemini $\vert$ Software Engineer} \hfill Dec 2021 - Jul 2024, Mumbai, India\\
-\vspace{-\baselineskip} 
- \begin{itemize}
-    \itemsep -3pt {} 
-     \item Proactively monitor cloud infrastructure components, including compute, storage, networking, and security, to ensure high availability, scalability, and performance for clients such as IKEA, SEQUANA and ALE.
-    \item Strong understanding of cloud computing principles and technologies, with hands-on experience in managing cloud infrastructure services (e.g., AWS, Azure, GCP).
-    \item Proficiency in scripting and automation using tools like Python, PowerShell, or Bash to automate repetitive tasks and improve operational efficiency.
- \end{itemize}
- 
-\textbf{Upcred.ai $\vert$ Machine Learning Trainee} \hfill Aug 2021 - Dec 2021, Bengaluru, India\\
-\vspace{-\baselineskip} 
- \begin{itemize}
-    \itemsep -3pt {} 
-     \item Spearheaded web scraping initiatives using Beautiful Soup to extract pertinent data from various online sources, facilitating data collection and preprocessing for machine learning projects.
-     \item Employed MongoDB as the primary database solution to store scraped data efficiently, ensuring seamless accessibility and scalability for downstream analysis and model development.
- \end{itemize}
+\begin{minipage}[t]{0.33\textwidth} 
 
-\end{rSection} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{rSection}{Education}
+\section{Education} 
 
-{\bf M.S., Data Science, University of Massachusetts, Dartmouth} \hfill \textbf{Expected 2026}\\
-Relevant Coursework: Advanced Machine Learning, Data Mining and Knowledge Discovery, Database Design, Small World Networks and Statistical Mathematics.
+\subsection{University of \\Massachusetts \\Dartmouth}
+\descript{MS Data Science}
+\location{Dec 2025 | Dartmouth, MA}
+\location{ Major GPA: 4.0 / 4.0}
+\sectionsep
 
-{\bf B.Tech., Computer and Communication Engineering, Manipal University, Jaipur} \hfill \textbf{2017 - 2021}
-
-\end{rSection}
+\subsection{Manipal University Jaipur}
+\descript{BTech Computer Science}
+\location{Jul 2021 | Jaipur, RJ}
+\location{Major GPA: 6.3 / 10.0}
+\sectionsep
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/rohanbalixz}{\bf rohanbalixz} \\
+LinkedIn://  \href{https://www.linkedin.com/in/rohan-bali-301345293}{\bf rohan-bali-301345293} \\
+Twitter://  \href{https://twitter.com/bali2ro}{\bf @bali2ro} \\
+Portfolio://  \href{https://medium.com/@bali2rohan}{\bf https://medium.com/@bali2rohan}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Advanced Mathematical Statistics \\
+Small World Networks \\
+Data Visualization \\
+High Power Computing \\
+Cloud Computing \\
+Market Research\\
+\sectionsep
+
+\subsection{Undergraduate}
+Data Structures and Algorithms \\
+Python Programming\\
+Machine Learning\\
+Database Management Systems \\
+Network Security\\
+Human Computer Interaction\\
+UNIX Shell Programming\\
+Operating Systems\\
+Social Network Analysis\\
+Engineering Mathematics
+% {\footnotesize \textit{\textbf{(Research Asst. \& Teaching Asst 2x) }}} \\
+Network Security \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Python \textbullet{}   R \textbullet{} Java \textbullet{} C \textbullet{} C++\textbullet{} SQL \textbullet{} HTML \textbullet{} CSS \textbullet{} PowerShell
+\subsection{Tools}
+Anaconda \textbullet{} D3js \textbullet{} Wolfram Mathematica \textbullet{}  Microsoft Azure \textbullet{} AWS \textbullet{} GCP \textbullet{} TensorFlow \textbullet{} Apache Spark \textbullet{} Apache Hadoop \textbullet{} MongoDB \textbullet{} Sci-Kit Learn \textbullet{} \textbullet{} PyTorch \textbullet{} NumPy \textbullet{} Pandas \textbullet{} XGBoost \textbullet{} NetworkX \textbullet{} CUDA \textbullet{} OpenCV \textbullet{} ServiceNow
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Capgemini}
+\descript{| Software Engineer}
+\location{Dec 2021 - Aug 2024}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Redesigned robust core components of an internal tool using Azure and AWS, reducing manual issues by 30\%, and Automated operational tasks
+with Python and PowerShell, boosting efficiency by 25\%.
+\item Led cross-functional code reviews, reducing deployment errors by 40\%, and Integrated CI/CD pipelines, enhancing release
+cycles by 15\%.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Upcred}
+\descript{| Machine Learning Intern }
+\location{Aug 2021 – Dec 2021}
+\begin{tightemize}
+\item Designed a learning-based approach saving \$650/month in operational costs, and reducing latency by 25\%.
+\item Maintained a version-controlled dataset repository, improving reproducibility across projects by 30\%.
+
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Projects}
+
+\runsubsection{Disaster Risk Monitoring Using Satellite Imagery - NVIDIA Deep Learning Institute}
+\begin{tightemize}
+\item Developed and deployed a deep learning segmentation model for real-time flood detection using satellite imagery.
+\item Leveraged a U-Net architecture with a ResNet backbone and robust pre-processing (normalization, augmentation, color conversion) to improve detection accuracy by 20\%.
+\item Evaluated model performance with IoU (0.78) and Dice Score (0.82) metrics, ensuring precise delineation of flood-affected regions. Integrated the model with Triton Inference Server for scalable, low-latency inference in disaster monitoring scenarios.
+
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Deep Learning for Historical Document Restoration and Analysis}
+\begin{tightemize}
+\item Developed a U-Net-based deep learning model to restore degraded historical document images, achieving improvements in visual clarity by 96\%. \item Implemented an OCR pipeline with TensorFlow and Tesseract for accurate text extraction from restored documents and used NLP techniques
+(LSTM) to classify document types with 87\% accuracy.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\runsubsection{Movie Recommendation System Using NLP and Machine Learning}}
+\begin{tightemize}
+\item Achieved an efficient recommendation pipeline by removing stop words, tokenizing metadata, and optimizing the feature space with the 5000 most frequent words.
+\item Engineered a Bag of Words model using CountVectorizer to transform textual data into numerical vectors. Computed cosine similarity to measure movie similarities.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{BOSTON REAL ESTATE PRICE PREDICTION}
+\begin{tightemize}
+\item Built different Regression models for 10,000 properties for the
+prediction of prices, improving prediction accuracy by 15\%.
+\item Engineered custom features like proximity to amenities, improving
+model performance by 12\% for the price prediction.
+\item Evaluated the model with MAE: 2.5 and RMSE: 3.2
+\end{tightemize}
+\sectionsep
 
 
 
-\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand\refname{\vskip -1.5em} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
